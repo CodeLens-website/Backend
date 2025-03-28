@@ -104,7 +104,7 @@ const AuthCallback = ({ setToken }) => {
             if (response.data.access_token) {
                 localStorage.setItem("github_token", response.data.access_token);
                 setToken(response.data.access_token);
-                navigate("/repos");
+                navigate("/");
             }
         } catch (error) {
             console.error("❌ Error exchanging code for token:", error);
