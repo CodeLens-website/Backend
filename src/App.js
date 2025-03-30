@@ -6,6 +6,7 @@ import AuthCallback from "./pages/AuthCallback";
 import GitHubAuth from "./components/GitHubAuth";
 import GitHubRepos from "./components/GitHubRepos";
 import SetupWebhook from "./components/SetupWebhook";
+import ResponsePage from "./pages/ResponsePage";
 
 const App = () => {
     const [token, setToken] = useState(localStorage.getItem("github_token"));
@@ -16,6 +17,7 @@ const App = () => {
         <Router>
             <Routes>
                 <Route path="/" element={<Home token={token} />} />
+                <Route path="/response" element={<ResponsePage />} />
                 <Route path="/repos" element={<GitHubRepos token={token} />} />
                 <Route path="/webhook" element={<SetupWebhook token={token} />} />
                 <Route path="/results" element={<Results />} />
