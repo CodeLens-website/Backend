@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const GITHUB_API_URL = "https://api.github.com";
-const NGROK_URL = " https://f41a-49-36-169-213.ngrok-free.app"; 
+const NGROK_URL = "https://64f7-49-36-169-213.ngrok-free.app"; 
 
 const createWebhook = async (token, repo) => {
   try {
